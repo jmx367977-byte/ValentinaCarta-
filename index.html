@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Libro de Mi Querida Valentina 💗</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Nunito:ital,wght@0,400;0,700;1,400;1,600&display=swap');
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        
+        body {
+            background-color: #fff0f5;
+            background-image: radial-gradient(#f8bbd0 1.5px, transparent 0);
+            background-size: 24px 24px;
+            font-family: 'Nunito', sans-serif;
+            color: #4a148c;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 25px 12px;
+            overflow-x: hidden;
+        }
+
+        .book-container {
+            width: 100%;
+            max-width: 720px;
+            background: #ffffff;
+            border-radius: 25px;
+            box-shadow: 0 15px 40px rgba(233, 30, 99, 0.18);
+            border: 3px solid #f48fb1;
+            padding: 40px 30px;
+            position: relative;
+        }
+
+        .book-header {
+            text-align: center;
+            border-bottom: 2px dashed #f8bbd0;
+            padding-bottom: 25px;
+            margin-bottom: 35px;
+        }
+
+        .book-title {
+            font-family: 'Caveat', cursive;
+            font-size: 3.2rem;
+            color: #d81b60;
+            line-height: 1.1;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.05);
+        }
+
+        .book-subtitle {
+            font-size: 1.1rem;
+            color: #ad1457;
+            margin-top: 10px;
+            font-style: italic;
+        }
+
+        .badge-anime {
+            display: inline-block;
+            background: #ffe082;
+            color: #5d4037;
+            font-size: 0.9rem;
+            font-weight: bold;
+            padding: 5px 15px;
+            border-radius: 20px;
+            margin-top: 12px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+        }
+
+        .toc {
+            background: #fff8fa;
+            border: 1.5px solid #f8bbd0;
+            border-radius: 18px;
+            padding: 22px;
+            margin-bottom: 40px;
+        }
+
+        .toc-title {
+            font-weight: bold;
+            color: #c2185b;
+            margin-bottom: 12px;
+            text-align: center;
+            font-size: 1.1rem;
+        }
+
+        .toc-list {
+            list-style: none;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 10px;
+            font-size: 1rem;
+        }
+
+        .toc-list a {
+            color: #e91e63;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+
+        .toc-list a:hover {
+            color: #880e4f;
+            padding-left: 5px;
+        }
+
+        .chapter {
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            border-bottom: 1.5px dashed #fce4ec;
+        }
+
+        .chapter:last-of-type {
+            border-bottom: none;
+            margin-bottom: 10px;
+        }
+
+        .chapter-title {
+            font-family: 'Caveat', cursive;
+            font-size: 2.3rem;
+            color: #c2185b;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .prose {
+            font-size: 1.05rem;
+            line-height: 1.9;
+            color: #4a148c;
+            text-align: justify;
+            background: #fafafa;
+            padding: 22px;
+            border-radius: 18px;
+            border: 1px solid #f8bbd0;
+            margin-bottom: 15px;
+        }
+
+        .prose p {
+            margin-bottom: 15px;
+        }
+
+        .prose p:last-child {
+            margin-bottom: 0;
+        }
+
+        .petals-container {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        .petal {
+            position: absolute;
+            background: #f8bbd0;
+            border-radius: 150% 0 150% 0;
+            opacity: 0.7;
+            animation: fall 6s linear infinite;
+        }
+
+        @keyframes fall {
+            0% { transform: translateY(-10vh) rotate(0deg); opacity: 1; }
+            100% { transform: translateY(105vh) rotate(360deg); opacity: 0; }
+        }
+
+        .footer-note {
+            text-align: center;
+            margin-top: 35px;
+            font-size: 1rem;
+            color: #ad1457;
+            font-style: italic;
+            border-top: 2px dashed #f8bbd0;
+            padding-top: 25px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="petals-container" id="petals"></div>
+
+    <div class="book-container">
+        <div class="book-header">
+            <h1 class="book-title">🌸 El libro de mi querida Valentina 🌸</h1>
+            <p class="book-subtitle">Una pequeña dedicación a mi niña con los ojitos más hermosos del mundo</p>
+            <span class="badge-anime">✨ Protagonista de Mi Vida ✨</span>
+        </div>
+
+        <div class="toc">
+            <div class="toc-title">📖 Índice de Capítulos</div>
+            <ul class="toc-list">
+                <li><a href="#cap1">Capítulo I: Los ojitos que iluminaron mi vida</a></li>
+                <li><a href="#cap2">Capítulo II: Tu piel color espuma, tu aroma a clavel y tu bello cabello</a></li>
+                <li><a href="#cap3">Capítulo III: Tu mundo y tus gustos</a></li>
+            </ul>
+        </div>
+
+        <!-- CAPITULO 1 -->
+        <div class="chapter" id="cap1">
+            <h2 class="chapter-title">👁️ Capítulo I: Los ojitos que iluminaron mi vida</h2>
+            <div class="prose">
+                <p>Querida Valentina, hoy es un día hermoso y quisiera decirte que tus ojitos son lo más preciado que tengo hasta ahora. Son increíbles y están llenos de una paz, para mí son y siempre serán los más hermosos del universo.</p>
+                <p>Sé que no te he podido ver a los ojos, pero no dudaría que si lo hago me pierdo en ellos. Y es chistoso cómo sin verlos al cien por ciento ya estoy profundamente enamorado de ti, incluso arriesgaría todo por esos ojitos hermosos.</p>
+                <p>Aún no logro entender cómo pudieron burlarse de ellos o despreciarlos sin ver más allá. Son tan hermosos y divinos que incluso la estrella más brillante pierde color al lado de los tuyos. Amo que aún esos ojitos me puedan ver con cariño, y perdón si alguna vez los hice chillar, nunca fue mi intención.</p>
+            </div>
+        </div>
+
+        <!-- CAPITULO 2 -->
+        <div class="chapter" id="cap2">
+            <h2 class="chapter-title">👑 Capítulo II: Tu piel color espuma, tu aroma a clavel y tu bello cabello</h2>
+            <div class="prose">
+                <p>Tan blanca y hermosa como la nieve, un color tan único que nunca en alguien había visto.</p>
+                <p>Sin duda aún Dios no me ha dejado estar al lado tuyo, pero no dudaría que tu aroma es riquísimo, tal vez como pétalos de rosa. Tu piel a veces se vuelve como un tomatito entre rojita y rosita jaja. Amo cuando se pone así porque el saber que ese color se plasmó en tu piel por mí me hace ser el hombre más feliz de la tierra.</p>
+                <p>Tu cabello es hermoso, no quiero exagerar pero amo cada mechón tuyo. Y como antes mencionaba me da envidia el viento porque él sí puede tocarlo. Tu cabello es hermoso por dondequiera que lo vea, tan liso y hermoso que parece irreal. Quiero estar contigo y cada mañana poder tocarlo, decirte cuánto te amo y lo agradecido que estoy con la vida de tenerte a mi lado.</p>
+            </div>
+        </div>
+
+        <!-- CAPITULO 3 -->
+        <div class="chapter" id="cap3">
+            <h2 class="chapter-title">🎀 Capítulo III: Tu mundo y tus gustos</h2>
+            <div class="prose">
+                <p>Mi niña chiquita, tal vez ya me has dicho todo o tal vez no, pero lo que me has comentado sobre tus gustos me parece hermoso jaja. Sé que tú ves el mundo de otra manera, ya sea por tu pensamiento propio o por lo que puedes llegar a ver.</p>
+                <p>Tu gusto por la sopita licuada es enorme jaja, pero yo amo que siempre tengas y disfrutes de lo mejor. Personalmente me gustaría que me contaras diario y a detalle tus nuevos gustos, sea lo que sea mi amor.</p>
+                <p>Se me olvidaba que también tu gusto por el anime me sorprende muchísimo, pero sin duda es tu cualidad o lo que te representa y lo amo. Y también te amo a ti muejeje perdon por todo te amo mucho😔</p>
+            </div>
+        </div>
+
+        <div class="footer-note">
+            Escrito con amor infinito para Valentina 💗<br>
+            ✨ Por y para siempre juntos ✨
+        </div>
+    </div>
+
+    <script>
+        // Generador de pétalos estilo sakura
+        const petalsContainer = document.getElementById('petals');
+        function createPetal() {
+            const petal = document.createElement('div');
+            petal.classList.add('petal');
+            petal.style.left = Math.random() * 100 + 'vw';
+            petal.style.width = Math.random() * 8 + 8 + 'px';
+            petal.style.height = Math.random() * 8 + 8 + 'px';
+            petal.style.animationDuration = Math.random() * 3 + 4 + 's';
+            petalsContainer.appendChild(petal);
+            setTimeout(() => { petal.remove(); }, 7000);
+        }
+        setInterval(createPetal, 300);
+    </script>
+</body>
+</html>
